@@ -4,7 +4,7 @@ public class Main {
     static ArrayList<Cow> cows = new ArrayList<>();
     public static void main(String[] args) {
 
-        Cow cow1 = new Cow(10,1,false,1,true,false);
+        /*Cow cow1 = new Cow(10,1,false,1,true,false);
         Cow cow2 = new Cow(2,3,false,1,true,true);
         Cow cow3 = new Cow(2, 4, true, 0, true, true);
         Cow cow4 = new Cow(2, 3, true, 0, true, true);
@@ -16,7 +16,9 @@ public class Main {
         cows.add(cow5);
         for (int i = 0; i < cows.size(); i++) {
             System.out.println(cows.get(i).getEyes());
+        }*/
 
-        }
+        Cow cow1 = new Cow("Солнышко", 10,1,false,1,true,true);
+        cow1.isUdder();
     }
 }
