@@ -1,62 +1,22 @@
-public class Cow {
-    private int eyes;
-    private int legs;
-    private boolean tail;
-    private int arms;
-    private boolean skin;
+public class Cow extends Animal {
     private boolean udder;
 
-    public Cow(int eyes, int legs, boolean tail, int arms, boolean skin, boolean udder) {
-        this.eyes = eyes;
-        this.legs = legs;
-        this.tail = tail;
-        this.arms = arms;
-        this.skin = skin;
+    public Cow(String name, int eyes, int legs, boolean tail, int arms, boolean skin, boolean udder) {
+        super(name, eyes, legs, tail, arms, skin);
         this.udder = udder;
     }
 
-    public int getEyes() {
-        return eyes;
+    public boolean milking(){
+        return true;
     }
 
-    public void setEyes(int eyes) {
-        this.eyes = eyes;
-    }
-
-    public int getLegs() {
-        return legs;
-    }
-
-    public void setLegs(int legs) {
-        this.legs = legs;
-    }
-
-    public boolean isTail() {
-        return tail;
-    }
-
-    public void setTail(boolean tail) {
-        this.tail = tail;
-    }
-
-    public int getArms() {
-        return arms;
-    }
-
-    public void setArms(int arms) {
-        this.arms = arms;
-    }
-
-    public boolean isSkin() {
-        return skin;
-    }
-
-    public void setSkin(boolean skin) {
-        this.skin = skin;
-    }
-
-    public boolean isUdder() {
-        return udder;
+    public void isUdder() {
+        if (udder) {
+            System.out.println("У коровы " + getName() + " есть вымя!");
+        }
+        else {
+            System.out.println("У коровы " + getName() + " нет вымени :(");
+        }
     }
 
     public void setUdder(boolean udder) {
