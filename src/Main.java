@@ -20,5 +20,7 @@ public class Main {
 
         Cow cow1 = new Cow("Солнышко", 10,1,false,1,true,true);
         cow1.isUdder();
+        Wolf wolf1 = new Wolf("Враяна", 2, 4,true,0,false,true);
+        wolf1.isFangs();
     }
 }
