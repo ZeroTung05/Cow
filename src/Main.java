@@ -22,5 +22,7 @@ public class Main {
         cow1.isUdder();
         Wolf wolf1 = new Wolf("Враяна", 2, 4,true,0,false,true);
         wolf1.isFangs();
+        Bear bear1 = new Bear("Миша",2,2,false,2,false,true);
+        bear1.isSharpСlaws();
     }
 }
