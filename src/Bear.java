@@ -1,9 +1,13 @@
-public class Bear extends Animal {
-    private boolean SharpСlaws;
+public class Bear extends Animal implements Fightable {
+    private boolean sharpСlaws;
 
-    public Bear(String name, int eyes, int legs, boolean tail, int arms, boolean skin, boolean SharpСlaws) {
-        super(name, eyes, legs, tail, arms, skin);
-        this.SharpСlaws = SharpСlaws;
+    public Bear(String name, int eyes, int legs, boolean tail, int arms, boolean skin, int healthPoints, int damage, boolean sharpСlaws) {
+        super(name, eyes, legs, tail, arms, skin, healthPoints, damage);
+        this.sharpСlaws = sharpСlaws;
+    }
+
+    public Bear(String name, int healthPoints, int damage) {
+        super(name, healthPoints, damage);
     }
 
     public boolean scratching(){
@@ -11,7 +15,7 @@ public class Bear extends Animal {
     }
 
     public void isSharpСlaws() {
-        if (SharpСlaws) {
+        if (sharpСlaws) {
             System.out.println("У медведя " + getName() + " есть острые когти!");
         }
         else {
@@ -19,7 +23,12 @@ public class Bear extends Animal {
         }
     }
 
-    public void setSharpСlaws(boolean SharpСlaws) {
-        this.SharpСlaws = SharpСlaws;
+    public void setSharpСlaws(boolean sharpСlaws) {
+        this.sharpСlaws = sharpСlaws;
+    }
+
+    @Override
+    public void hit(Animal animal) {
+        animal.takeDamage(getDamage());
     }
 }

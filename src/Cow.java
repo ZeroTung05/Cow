@@ -1,9 +1,13 @@
 public class Cow extends Animal {
     private boolean udder;
 
-    public Cow(String name, int eyes, int legs, boolean tail, int arms, boolean skin, boolean udder) {
-        super(name, eyes, legs, tail, arms, skin);
+    public Cow(String name, int eyes, int legs, boolean tail, int arms, boolean skin, int healthPoints, int damage, boolean udder) {
+        super(name, eyes, legs, tail, arms, skin, healthPoints, damage);
         this.udder = udder;
+    }
+
+    public Cow(String name, int healthPoints, int damage) {
+        super(name, healthPoints, damage);
     }
 
     public boolean milking(){

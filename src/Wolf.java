@@ -1,9 +1,14 @@
-public class Wolf extends Animal {
+public class Wolf extends Animal implements Fightable {
     private boolean fangs;
 
-    public Wolf(String name, int eyes, int legs, boolean tail, int arms, boolean skin, boolean fangs) {
-        super(name, eyes, legs, tail, arms, skin);
+
+    public Wolf(String name, int eyes, int legs, boolean tail, int arms, boolean skin, int healthPoints, int damage, boolean fangs) {
+        super(name, eyes, legs, tail, arms, skin, healthPoints, damage);
         this.fangs = fangs;
+    }
+
+    public Wolf(String name, int healthPoints, int damage) {
+        super(name, healthPoints, damage);
     }
 
     public boolean bites(){
@@ -21,5 +26,10 @@ public class Wolf extends Animal {
 
     public void setFangs(boolean fangs) {
         this.fangs = fangs;
+    }
+
+    @Override
+    public void hit(Animal animal) {
+        animal.takeDamage(getDamage());
     }
 }
