@@ -6,15 +6,16 @@ public class Bear extends Animal {
         this.SharpСlaws = SharpСlaws;
     }
 
-    public boolean scratching(){return true;
+    public boolean scratching(){
+        return true;
     }
 
     public void isSharpСlaws() {
         if (SharpСlaws) {
-            System.out.println("У волка " + getName() + " есть острые когти!");
+            System.out.println("У медведя " + getName() + " есть острые когти!");
         }
         else {
-            System.out.println("У волка " + getName() + " нету острых когтей :(");
+            System.out.println("У медведя " + getName() + " нету острых когтей :(");
         }
     }
 

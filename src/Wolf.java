@@ -6,7 +6,8 @@ public class Wolf extends Animal {
         this.fangs = fangs;
     }
 
-    public boolean bites(){return true;
+    public boolean bites(){
+        return true;
     }
 
     public void isFangs() {
